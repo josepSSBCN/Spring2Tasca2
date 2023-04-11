@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title>ITAcademy: Java BE 5.2.1</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/s5t2n1e1.css}">
+    <link rel="stylesheet" th:href="@{/css/game.css}">
+</head>
+<body>
+<!-- NAVEGATION BAR -->
+<header th:fragment="header(titleVar,userName)">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="container_1 ">
+                <a class="navbar-brand">
+                    <strong>
+                        <img src="/images/IT-Academy.png" style="height:40px">
+                    </strong>
+                </a>
+                <span class="navbar-text navbar-left" style="color-white">
+                    Joc de Daus (S05T02N01)
+                </span>
+            </div>
+            <span class="navbar-text" th:text="${titleVar}">
+            </span>
+            <div class="container_4 navbar-right">
+                <span class="navbar-text" th:text="${userName}">
+                </span>
+                <a th:href="@{/user/auth/userFrm/${userName}}">
+                    <strong>
+                        <img src="/images/user.png" style="height:40px">
+                    </strong>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<!-- CONTEND -->
+<div class="container"></div>
+
+<!-- FOOT PAGE  -->
+
+<footer th:fragment="footer" class="bg-dark text-white text-center fixed-bottom">
+    <div class="container">
+        <p> Copyright Josep Salgado &copy; - 2023</p>
+    </div>
+
+    <script type="text/javascript" th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/popper.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/user.js}"></script>
+    <script type="text/javascript" th:src="@{/js/game.js}"></script>
+    <script type="text/javascript" th:src="@{/js/functionLibrary.js}"></script>
+    <script type="text/javascript" th:src="@{/js/home.js}"></script>
+
+</footer>
+</body>
+</html>

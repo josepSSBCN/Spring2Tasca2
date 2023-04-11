@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{template/mainTemplate :: head}">
+    <link rel="stylesheet" th:href="@{/css/game.css}">
+</head>
+<body>
+<header th:replace="~{template/mainTemplate :: header('GAME', ${userName})}"></header>
+
+<div class="container-fluid h-100">
+    <div class="row justify-content-center h-100">
+        <div class="col-1" id="Colum_1">
+            <div class="row-1 text-center" id="Col1_Row1">
+                <h1 id='victorx100Var'></h1>
+            </div>
+            <div class="row-2 text-center" id="Col1_Row2">
+                <h1 id='playsVar'></h1>
+            </div>
+            <div class="row-3" id="Col1_Row3">
+                <table class="table table-dark table-striped-columns" id="TablePlaysViewGame">
+                </table>
+            </div>
+            <div class="row-4" id="Col1_Row4">
+                <button type="button" class="btn btn-primary" onclick="DeleteAllPlays()">DELETE</button>
+            </div>
+        </div>
+        <div class="col-2" id="Colum_2">
+            <div class="row-4" id="Col2_Row0">
+            </div>
+            <div class="row-1" id="Col2_Row1">
+                <div id="Col2_Row1_Col1">
+                    <img id="imageDice1" src="/images/dice/dau_1.png" style="height:120px">
+                </div>
+                <div id="Col2_Row1_Col2">
+                    <img id="imageDice2" src="/images/dice/dau_1.png" style="height:120px">
+                </div>
+            </div>
+            <div class="row-2" id="Col2_Row2">
+                <strong>
+                    <h1><span id="resultVar"></span></h1>
+                    <h1><span id="textResultVar"></span></h1>
+                </strong>
+            </div>
+            <div class="row-3" id="Col2_Row3">
+                <div class="d-grid gap-2">
+                    <div class="col-lg-6 col-xxl-4 my-5 mx-auto">
+                        <button class="btn btn-primary" type="button" onclick="MixDice()">
+                            <h1>ROLL DICE</h1>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row-4" id="Col2_Row4">
+            </div>
+        </div>
+        <div class="col-3" id="Colum_3">
+            <div class="row-1 text-left" id="Col3_Row1">
+                <h1 id='rankingAllUsers'></h1>
+            </div>
+            <div class="row-2 text-left" id="Col3_Row2">
+                <h1 id='winnerUserVar'></h1>
+            </div>
+            <div class="row-3 text-left" id="Col3_Row3">
+                <h1 id='lossUserVar'></h1>
+            </div>
+            <div class="row-4" id="Col3_Row4">
+                <table class="table table-dark table-striped-columns" id="TableUsers">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.onload = function(){
+        GameViewOnload();
+    };
+
+
+</script>
+
+<footer th:replace="~{template/mainTemplate :: footer}">
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{template/mainTemplate :: head}">
+    <link rel="stylesheet" th:href="@{/css/game.css}">
+</head>
+<body>
+<header th:replace="~{template/mainTemplate :: header(titleVar='USER', userName=${userNameAtt})}"></header>
+
+<div>
+    <div id="mainBlock">
+        <div id="centerScreen">
+            <div class="ctrCont">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <form>
+                            <div class="b-example-dividir"></div>
+                            <div class="form-group row">
+                                <label for="DateSignUpView" >USER SIGN UP DATE</label>
+                                <div class="col-sm-10">
+                                    <input type="text" readonly class="form-control-plaintext" id="DateSignUpView">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="UserNameView">USER NAME</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="UserNameView">
+                                </div>
+                                <div class="b-example-dividir"></div>
+                                <div class="col-sm-10">
+                                    <button class="btn btn-primary" id="buttonEditName" onmouseup="UserViewUpdateName()">SAVE NAME</button>
+                                </div>
+                            </div>
+                            <div class="b-example-dividir"></div>
+                            <div class="form-group row">
+                                <label for="PasswordView">Password</label>
+                                <div class="col-sm-10">
+                                    <input type="password" readonly class="form-control" id="PasswordView">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="button position-fixed bottom-0 end-0 mb-5 me-3">
+        <a>
+            <button class="btn btn-primary" type="button" onclick="OpenGame('')">RETURN GAME</button>
+        </a>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    window.onload = function(){
+        UserViewOnload();
+    };
+
+</script>
+
+<footer th:replace="~{template/mainTemplate :: footer}"></footer>
+</body>
+</html>

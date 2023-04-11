@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{template/mainTemplate :: head}">
+</head>
+<body>
+<header th:replace="~{template/mainTemplate :: header(titleVar='HOME', userName='----')}"></header>
+
+<div id="mainBlock">
+    <div id="centerScreen">
+        <div class="ctrCont" style="margin-right: 50px;">
+            <a>
+                <button type="button" id="buttonLOGIN" onclick="OpenLogin()">LOGIN</button>
+            </a>
+            <a>
+                <button type="button" id="buttonNEWUSER" onclick="OpenNewUser()">NEW USER</button>
+            </a>
+        </div>
+        <div class="ctrCont">
+            <h5>SELECT DDBB TYPE</h5>
+            <div style="border: 1px solid black;">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                           onclick="SelectMySQLDDBB()" checked>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        MySQL DDBB
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                           onclick="SelectMongoDDBB">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Mongo DDBB
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.onload = function(){
+        HomeViewOnload();
+    };
+
+</script>
+
+<footer th:replace="~{template/mainTemplate :: footer}"></footer>
+</body>
+</html>
+

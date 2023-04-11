@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+ #wrapper {
+     width: 90vw;
+     height: 90vh;
+     position: absolute;
+ }
+
+#buttonLCL {
+     position:absolute;
+     bottom:6%;
+     right:1%;
+ }
+
+html, body {
+  height: 95%;
+}
+
+#Colum_1 {
+  height: 100%;
+  width:25%;
+  background: gray;
+}
+
+#Colum_2 {
+  height: 100%;
+  width:50%;
+  background: silver;
+}
+
+#Colum_3 {
+  height: 100%;
+  width:25%;
+  background: gray;
+}
+
+#Col1_Row1 {
+    height: 10%;
+    width: 100%;
+    background: AliceBlue;
+}
+
+#Col1_Row2 {
+    height: 10%;
+    width: 100%;
+    background: SteelBlue;
+}
+
+#Col1_Row3{
+    height: 70%;
+    width: 100%;
+    background: navy;
+}
+
+#Col1_Row4{
+    height: 10%;
+    width: 100%;
+    background: navy;
+}
+
+#Col2_Row0{
+    height: 10%;
+    width: 100%;
+    background: gray;
+}
+
+#Col2_Row1{
+    height: 30%;
+    width: 100%;
+    background: gray;
+}
+
+#Col2_Row1_Col1{
+    height: 100%;
+    width: 50%;
+    background: gray;
+    float: left;
+    'overflow: hidden;
+    color: green;
+    display: flex;
+    justify-content: center;
+}
+
+#Col2_Row1_Col2{
+    height: 100%;
+    width: 50%;
+    background: gray;
+    float: right;
+    'overflow: hidden;
+    color: red;
+    display: flex;
+    justify-content: center;
+}
+
+#Col2_Row2{
+    height: 15%;
+    width: 100%;
+    background: gray;
+}
+
+#Col2_Row3{
+    height: 15%;
+    width: 100%;
+    background: gray;
+}
+
+#Col2_Row4{
+    height: 35%;
+    width: 100%;
+    background: gray;
+}
+
+#Col3_Row1{
+    height: 10%;
+    width: 100%;
+    background-color: AliceBlue;
+}
+
+#Col3_Row2{
+    height: 10%;
+    width: 100%;
+    background-color: #079E17;
+}
+
+#Col3_Row3{
+    height: 10%;
+    width: 100%;
+    background-color: #FC3030;
+}
+
+#Col3_Row4{
+    height: 70%;
+    width: 100%;
+    background: gray;
+}
+
+#imageDice1{
+    height: 100%;
+    width: 50%;
+}
+
+#imageDice2{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+

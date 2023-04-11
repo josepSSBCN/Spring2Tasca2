@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{template/mainTemplate :: head}">
+</head>
+<body>
+<header th:replace="~{template/mainTemplate :: header(titleVar='NEW USER', userName='----')}"></header>
+
+<div>
+    <div id="mainBlock">
+        <div id="centerScreen">
+            <div class="ctrCont">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <!-- NEW USER NAME -->
+                        <div class="row mb-3">
+                            <label class="col-sm-4 col-form-label" for="userName">Name</label>
+                            <div class="col-sm-10">
+                                <input  type="text" id="userName">
+                            </div>
+                        </div>
+                        <!-- PASSWORD 1 -->
+                        <div class="row mb-3">
+                            <label class="col-sm-4 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input id="pass1" type="password" >
+                            </div>
+                        </div>
+                        <!-- PASSWORD 2 -->
+                        <div class="row mb-3">
+                            <label class="col-sm-6 col-form-label">Repate Password</label>
+                            <div class="col-sm-10">
+                                <input id="pass2" type="password" >
+                            </div>
+                        </div>
+                        <!-- SIGN UP -->
+                        <button class="btn btn-primary" type="button" onclick="SignUpFunc()">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer th:replace="~{template/mainTemplate :: footer}"></footer>
+</body>
+</html>
